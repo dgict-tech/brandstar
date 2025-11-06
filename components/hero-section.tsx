@@ -29,11 +29,18 @@ export default function HeroSection() {
 
             <div className="flex gap-4 pt-4">
               <Button
+                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg shadow-primary/20"
               >
-                Launch Editor
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <a
+                  href="https://brandstar.netlify.app/"
+                  // target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Launch Editor
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
               </Button>
               <Button
                 size="lg"

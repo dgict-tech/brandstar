@@ -88,7 +88,7 @@ export default function TryItOut() {
             <div className="space-y-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex gap-4 group">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <span className="text-primary font-bold text-sm">{index + 1}</span>
                   </div>
                   <div>
@@ -102,16 +102,22 @@ export default function TryItOut() {
             </div>
 
             <Button
-              onClick={() => setIsOpen(true)}
+              asChild
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold py-6 text-lg mt-8"
             >
-              Launch Design Studio
+              <a
+                href="https://brandstar.netlify.app/"
+                // target="_blank"
+                rel="noopener noreferrer"
+              >
+                Launch Design Studio
+              </a>
             </Button>
           </div>
         </div>
 
         {/* CTA Banner */}
-        <div className="bg-gradient-to-r from-primary/10 to-accent/10 border-2 border-primary/20 rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-linear-to-r from-primary/10 to-accent/10 border-2 border-primary/20 rounded-2xl p-8 md:p-12 text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4 text-balance">
             Ready to Create Amazing Branded Products?
           </h3>
@@ -119,8 +125,16 @@ export default function TryItOut() {
             Join thousands of businesses already using Brandstar to bring their visions to life.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold px-8 py-6">
-              Start Free Trial
+            <Button
+              asChild
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold px-8 py-6"
+            >
+              <a
+                href="https://brandstar.netlify.app/signup"
+                rel="noopener noreferrer"
+              >
+                Start Free Trial
+              </a>
             </Button>
             <Button
               variant="outline"
