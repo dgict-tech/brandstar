@@ -14,7 +14,7 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <span className="text-primary font-semibold text-sm tracking-widest uppercase flex items-center gap-2">
+              <span className="text-white font-semibold text-sm tracking-widest uppercase flex items-center gap-2">
                 <div className="w-1 h-1 bg-primary rounded-full"></div>
                 Welcome to Brandstar
               </span>
@@ -31,7 +31,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 shadow-lg shadow-primary/20"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 shadow-lg shadow-primary/20 font-bold"
               >
                 <a
                   href="https://brandstar.netlify.app/"

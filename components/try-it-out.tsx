@@ -103,7 +103,7 @@ export default function TryItOut() {
 
             <Button
               asChild
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold py-6 text-lg mt-8"
+              className="w-full bg-primary text-secondary-foreground hover:bg-primary/90 rounded-lg font-semibold py-6 text-lg mt-8"
             >
               <a
                 href="https://brandstar.netlify.app/"
@@ -127,7 +127,7 @@ export default function TryItOut() {
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button
               asChild
-              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg font-semibold px-8 py-6"
+              className="bg-primary text-secondary-foreground hover:bg-primary/90 rounded-lg font-semibold px-8 py-6"
             >
               <a
                 href="https://brandstar.netlify.app/signup"

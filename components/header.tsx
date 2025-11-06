@@ -32,7 +32,7 @@ export default function Header() {
           {/* <Button variant="ghost" size="sm" className="hidden sm:inline">
             Sign In
           </Button> */}
-          <Button size="sm" className="bg-[#fa5500] text-white hover:bg-[#fa5500]/90 rounded-full">
+          <Button size="sm" className="bg-[#fa5500] font-bold text-white hover:bg-[#fa5500]/90 rounded-full">
             Get Started
           </Button>
           <button className="md:hidden p-2 hover:bg-secondary rounded-lg transition">
