@@ -1,7 +1,14 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
 export default function HeroSection() {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById("pricing-section")
+    pricingSection?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-16">
       <div className="absolute inset-0 overflow-hidden">
@@ -11,36 +18,29 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <span className="text-white font-semibold text-sm tracking-widest uppercase flex items-center gap-2">
                 <div className="w-1 h-1 bg-primary rounded-full"></div>
                 Welcome to Brandstar
               </span>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight text-balance">
-                <span className="text-primary">Design It.</span> Brand It. Wear It.
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight text-balance">
+                <span className="text-primary">Integrate</span> Custom Design Tools into Your Platform
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                Create stunning custom branded products without limitations. From apparel to accessories, bring your
-                vision to life in minutes.
+                Brandstar's powerful editor design engine lets your users create stunning branded products directly within your
+                application. No development overhead, just plug and play.
               </p>
             </div>
 
             <div className="flex gap-4 pt-4">
               <Button
-                asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 shadow-lg shadow-primary/20 font-bold"
+                className="bg-primary text-bold hover:bg-primary/90 text-secondary-foreground rounded-full px-8 shadow-lg shadow-primary/20"
+                onClick={scrollToPricing}
               >
-                <a
-                  href="https://brandstar.netlify.app/"
-                  // target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Launch Editor
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
+                Integrate Now
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 size="lg"
@@ -68,7 +68,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Image */}
           <div className="relative hidden md:block">
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-linear-to-br from-primary/20 to-accent/20 border border-border p-8">
               <img

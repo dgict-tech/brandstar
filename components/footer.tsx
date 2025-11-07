@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-card border-t border-border py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
+
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-foreground">Brandstar</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -15,7 +15,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">Product</h4>
             <ul className="space-y-2">
@@ -29,7 +28,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2">
@@ -43,7 +41,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-2">

@@ -29,7 +29,6 @@ export default function TryItOut() {
   return (
     <section className="py-20 px-4 md:px-8 bg-linear-to-b from-background via-card/30 to-background">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
             <span className="text-primary font-semibold text-sm">Try It Now</span>
@@ -40,9 +39,7 @@ export default function TryItOut() {
           </p>
         </div>
 
-        {/* Interactive Demo */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Side - Demo Preview */}
           <div className="relative">
             <div
               className="bg-linear-to-br from-primary/10 to-accent/10 rounded-2xl aspect-video flex items-center justify-center border-2 border-primary/20 overflow-hidden group cursor-pointer"
@@ -66,14 +63,12 @@ export default function TryItOut() {
               </button>
             </div>
 
-            {/* Floating Cards */}
             <div className="absolute -bottom-6 -left-6 bg-card border-2 border-border rounded-xl p-4 shadow-lg max-w-xs">
               <p className="text-sm font-semibold text-primary mb-1">Pro Tip</p>
               <p className="text-sm text-foreground">Use AI to generate designs matching your brand in seconds</p>
             </div>
           </div>
 
-          {/* Right Side - Features */}
           <div className="space-y-6">
             <div>
               <h3 className="text-3xl font-bold mb-2 text-balance">
@@ -116,7 +111,6 @@ export default function TryItOut() {
           </div>
         </div>
 
-        {/* CTA Banner */}
         <div className="bg-linear-to-r from-primary/10 to-accent/10 border-2 border-primary/20 rounded-2xl p-8 md:p-12 text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4 text-balance">
             Ready to Create Amazing Branded Products?
