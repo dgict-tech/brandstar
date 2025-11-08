@@ -68,7 +68,7 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-            <span className="text-primary font-semibold text-sm">Flexible Licensing</span>
+            <span className="text-secondary-foreground lg:text-primary font-semibold text-sm">Flexible Licensing</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
             Editor Engine <span className="text-primary">Pricing Plans</span>

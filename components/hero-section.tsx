@@ -36,7 +36,7 @@ export default function HeroSection() {
             <div className="flex gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-primary text-bold hover:bg-primary/90 text-secondary-foreground rounded-full px-8 shadow-lg shadow-primary/20"
+                className="bg-primary text-bold hover:bg-primary/90 text-secondary-foreground rounded-full px-8 lg:shadow-lg shadow-primary/20"
                 onClick={scrollToPricing}
               >
                 Integrate Now

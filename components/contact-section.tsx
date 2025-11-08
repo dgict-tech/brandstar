@@ -63,7 +63,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-card border border-border rounded-lg p-8 text-center hover:border-primary transition-colors">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
-              <Mail className="w-6 h-6 text-primary" />
+              <Mail className="w-6 h-6 text-secondary-foreground lg:text-primary" />
             </div>
             <h3 className="font-semibold text-foreground mb-2">Email</h3>
             <p className="text-muted-foreground">brandstar@gmail.com</p>
@@ -71,7 +71,7 @@ export default function ContactSection() {
 
           <div className="bg-card border border-border rounded-lg p-8 text-center hover:border-primary transition-colors">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
-              <Phone className="w-6 h-6 text-primary" />
+              <Phone className="w-6 h-6 text-secondary-foreground lg:text-primary" />
             </div>
             <h3 className="font-semibold text-foreground mb-2">Phone</h3>
             <p className="text-muted-foreground">+234 9138979249</p>
@@ -79,7 +79,7 @@ export default function ContactSection() {
 
           <div className="bg-card border border-border rounded-lg p-8 text-center hover:border-primary transition-colors">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4">
-              <MapPin className="w-6 h-6 text-primary" />
+              <MapPin className="w-6 h-6 text-secondary-foreground lg:text-primary" />
             </div>
             <h3 className="font-semibold text-foreground mb-2">Location</h3>
             <p className="text-muted-foreground">Lagos, Nigeria</p>

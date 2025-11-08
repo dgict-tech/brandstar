@@ -25,7 +25,7 @@ export default function DeveloperSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-            <span className="text-primary font-semibold text-sm">For Developers</span>
+            <span className="text-secondary-foreground lg:text-primary font-semibold text-sm">For Developers</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
             Integrate with <span className="text-primary">Ease</span>
@@ -45,7 +45,7 @@ export default function DeveloperSection() {
                 className="rounded-2xl border-2 border-border bg-background p-8 hover:border-primary/50 transition-all"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-primary" />
+                  <Icon className="w-6 h-6 text-secondary-foreground lg:text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{integration.title}</h3>
                 <p className="text-muted-foreground">{integration.description}</p>

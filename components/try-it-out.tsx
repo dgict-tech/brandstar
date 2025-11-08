@@ -31,7 +31,7 @@ export default function TryItOut() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-            <span className="text-primary font-semibold text-sm">Try It Now</span>
+            <span className="text-secondary-foreground lg:text-primary font-semibold text-sm">Try It Now</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">See Brandstar in Action</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -45,7 +45,7 @@ export default function TryItOut() {
               className="bg-linear-to-br from-primary/10 to-accent/10 rounded-2xl aspect-video flex items-center justify-center border-2 border-primary/20 overflow-hidden group cursor-pointer"
               onClick={() => setIsOpen(true)}
             >
-              <div className="absolute inset-0 bg-linear-to-br from-primary/0 via-primary/5 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/10 transition-all" />
+              <div className="absolute inset-0 lg:bg-linear-to-br from-primary/0 via-primary/5 to-primary/0 group-hover:from-primary/10 group-hover:to-primary/10 transition-all" />
 
               <img
                 src="/design-studio-interface-with-t-shirt-preview.jpg"
@@ -63,7 +63,7 @@ export default function TryItOut() {
               </button>
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-card border-2 border-border rounded-xl p-4 shadow-lg max-w-xs">
+            <div className="absolute -bottom-6 -left-2 md:-left-6 bg-card border-2 border-border rounded-xl p-4 shadow-lg max-w-xs">
               <p className="text-sm font-semibold text-primary mb-1">Pro Tip</p>
               <p className="text-sm text-foreground">Use AI to generate designs matching your brand in seconds</p>
             </div>
@@ -84,7 +84,7 @@ export default function TryItOut() {
               {features.map((feature, index) => (
                 <div key={index} className="flex gap-4 group">
                   <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <span className="text-primary font-bold text-sm">{index + 1}</span>
+                    <span className="text-secondary-foreground lg:text-primary font-bold text-sm">{index + 1}</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">
