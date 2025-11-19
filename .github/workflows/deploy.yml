@@ -20,7 +20,7 @@ jobs:
             - name: Install Dependencies
               run: npm install
 
-            - name: Build Next.js (Static Export)
+            - name: Build & Export Next.js
               run: |
                   npm run build
                   npm run export
@@ -30,7 +30,7 @@ jobs:
               with:
                   ssh-private-key: ${{ secrets.SSH_KEY }}
 
-            - name: Upload Exported Files to Server
+            - name: Upload Files
               run: |
                   scp -r -P ${{ secrets.SSH_PORT }} ./out/* \
                   ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/htdocs/brandstar.space
