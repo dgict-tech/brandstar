@@ -1,34 +1,39 @@
-name: Deploy Next.js App to Linux Server
+name: Deploy to Linux Server
 
 on:
     push:
-        branches: ["main"]
+        branches:
+            - main
 
 jobs:
-    build-and-deploy:
+    deploy:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout Code
-              uses: actions/checkout@v4
+            - name: Checkout repo
+              uses: actions/checkout@v3
 
-            - name: Install Node
-              uses: actions/setup-node@v4
+            - name: Setup Node
+              uses: actions/setup-node@v3
               with:
-                  node-version: 22
+                  node-version: 18
 
-            - name: Install Dependencies
+            - name: Install deps
               run: npm install
 
-            - name: Build Next.js (Static Export)
+            - name: Build project
               run: npm run build
 
-            - name: Setup SSH
-              uses: webfactory/ssh-agent@v0.9.0
-              with:
-                  ssh-private-key: ${{ secrets.SSH_KEY }}
+            - name: Export static files (Next.js)
+              run: npm run export
 
-            - name: Upload Exported Files to Server
+            # FIX SSH VERIFICATION ISSUE HERE
+            - name: Add known hosts
               run: |
-                  scp -r -P ${{ secrets.SSH_PORT }} ./out/* \
-                  ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/htdocs/brandstar.space
+                  mkdir -p ~/.ssh
+                  ssh-keyscan -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+            - name: Upload to server
+              run: |
+                  scp -r -P ${{ secrets.SERVER_PORT }} ./out/* \
+                    ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:/home/***/htdocs/brandstar.space
