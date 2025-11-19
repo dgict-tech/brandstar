@@ -20,17 +20,15 @@ jobs:
             - name: Install Dependencies
               run: npm install
 
-            - name: Build & Export Next.js
-              run: |
-                  npm run build
-                  npm run export
+            - name: Build Next.js (Static Export)
+              run: npm run build
 
             - name: Setup SSH
               uses: webfactory/ssh-agent@v0.9.0
               with:
                   ssh-private-key: ${{ secrets.SSH_KEY }}
 
-            - name: Upload Files
+            - name: Upload Exported Files to Server
               run: |
                   scp -r -P ${{ secrets.SSH_PORT }} ./out/* \
                   ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/htdocs/brandstar.space
